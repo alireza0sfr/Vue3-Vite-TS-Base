@@ -1,11 +1,14 @@
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
-import './style.css'
+import { createPinia } from 'pinia'
+
 import App from './App.vue'
 import en from './locales/en.json'
 import fa from './locales/fa.json'
+import './style.css'
 
 const app = createApp(App)
+const pinia = createPinia()
 
 const i18n = createI18n({
   locale: 'en',
@@ -17,4 +20,5 @@ const i18n = createI18n({
 })
 
 app.use(i18n)
+app.use(pinia)
 app.mount('#app')
