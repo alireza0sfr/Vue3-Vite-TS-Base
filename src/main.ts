@@ -5,7 +5,6 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import en from './locales/en.json'
 import fa from './locales/fa.json'
-import './style.css'
 
 import Logger from './plugins/logger'
 
