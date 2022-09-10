@@ -29,17 +29,15 @@
 			Logger.log( _.trim(' Lodash Works Fine! '))
 			Logger.log("Logger Works Fine!");
 		},
-		name: "HelloWorld",
+		name: "DeleteThisLater",
 		props: {
-			msg: String,
+			msg: {
+				type: String,
+				default: 'Vite + Vue 3 Base'
+			},
 		},
 		computed: {
 			...mapStores(useObjectStore),
 		},
 	});
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less">
-@import '~/styles/style.less';
-</style>
