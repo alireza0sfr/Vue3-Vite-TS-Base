@@ -7,8 +7,7 @@ import en from './locales/en.json'
 import fa from './locales/fa.json'
 import './style.css'
 
-// @ts-ignore
-import Logger from '~/plugins/logger.ts'
+import Logger from './plugins/logger'
 
 const app = createApp(App)
 const pinia = createPinia()

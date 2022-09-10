@@ -15,21 +15,18 @@
 </template>
 
 <script lang="ts">
-	import { defineComponent } from "vue";
 	// @ts-ignore
 	import { useObjectStore } from "~/stores/index.ts";
+	import { defineComponent } from "vue";
 	import { mapStores } from "pinia";
-	// @ts-ignore
-	import { Logger } from "~/plugins/logger.ts";
-	// @ts-ignore
-	import mixins from "~/plugins/mixins.ts";
-	// @ts-ignore
-	import trim from 'lodash/trim'
+	import { Logger } from "~/plugins/logger";
+	import mixins from '~/plugins/mixins';
+	import _ from 'lodash'
 
 	export default defineComponent({
 		mixins: [mixins],
 		mounted() {
-			Logger.log( trim(' Lodash Works Fine! '))
+			Logger.log( _.trim(' Lodash Works Fine! '))
 			Logger.log("Logger Works Fine!");
 		},
 		name: "HelloWorld",
