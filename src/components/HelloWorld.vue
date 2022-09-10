@@ -8,18 +8,10 @@
 		<p>
 			Testing Store: {{ objectStore.object.message }}
 		</p>
+		<p>
+			Testing Mixins: {{ mixinsMessage }}
+		</p>
 	</div>
-
-	<p>
-		Check out
-		<a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite starter
-	</p>
-	<p>
-		Install
-		<a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-		in your IDE for a better DX
-	</p>
-	<p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <script lang="ts">
@@ -27,8 +19,11 @@
 	// @ts-ignore
 	import { useObjectStore } from "~/stores/index.ts";
 	import { mapStores } from "pinia";
+	// @ts-ignore
+	import mixins from "~/plugins/mixins.ts";
 
 	export default defineComponent({
+		mixins: [mixins],
 		mounted() {},
 		name: "HelloWorld",
 		props: {
