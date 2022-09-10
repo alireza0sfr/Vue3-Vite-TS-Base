@@ -23,10 +23,13 @@
 	import { Logger } from "~/plugins/logger.ts";
 	// @ts-ignore
 	import mixins from "~/plugins/mixins.ts";
+	// @ts-ignore
+	import trim from 'lodash/trim'
 
 	export default defineComponent({
 		mixins: [mixins],
 		mounted() {
+			Logger.log( trim(' Lodash Works Fine! '))
 			Logger.log("Logger Works Fine!");
 		},
 		name: "HelloWorld",
