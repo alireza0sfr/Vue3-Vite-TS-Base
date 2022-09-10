@@ -7,6 +7,9 @@ import en from './locales/en.json'
 import fa from './locales/fa.json'
 import './style.css'
 
+// @ts-ignore
+import Logger from '~/plugins/logger.ts'
+
 const app = createApp(App)
 const pinia = createPinia()
 
@@ -18,6 +21,8 @@ const i18n = createI18n({
     fa
   },
 })
+
+app.config.globalProperties.logger = new Logger()
 
 app.use(i18n)
 app.use(pinia)

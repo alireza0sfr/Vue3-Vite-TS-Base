@@ -20,11 +20,15 @@
 	import { useObjectStore } from "~/stores/index.ts";
 	import { mapStores } from "pinia";
 	// @ts-ignore
+	import { Logger } from "~/plugins/logger.ts";
+	// @ts-ignore
 	import mixins from "~/plugins/mixins.ts";
 
 	export default defineComponent({
 		mixins: [mixins],
-		mounted() {},
+		mounted() {
+			Logger.log("Logger Works Fine!");
+		},
 		name: "HelloWorld",
 		props: {
 			msg: String,
