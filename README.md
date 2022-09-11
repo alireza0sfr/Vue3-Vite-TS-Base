@@ -118,6 +118,7 @@ MIT.
 
 # Todo
 - [*] fix build configs.
+- [] add validator docs.
 
 # Bugs
 Feel free to let me know if something needs to be fixed. or even any features seems to be needed in this repo.

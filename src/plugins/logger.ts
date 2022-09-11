@@ -92,7 +92,7 @@ class Logger implements ILogger {
   }
 }
 
-import { ILogger, LoggerLevels, LoggerLevelType } from '../interfaces/general'
+import { ILogger, LoggerLevels, LoggerLevelType } from '../interfaces/logger'
 
 const globalLogger = new Logger()
 
