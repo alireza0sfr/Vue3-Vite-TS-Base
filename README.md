@@ -1,5 +1,15 @@
-<h1 align="center">Ultimate Vue3 + Vite + TS base <a href="https://git-scm.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="vue" width="40" height="40"/> </a></h1> 
+<h1 align="center">Ultimate Vue3 + Vite + TS base</h1> 
 <h3 align="center">Just a big starting point for any frontend projects using vite</h3>
+<p align="center">
+<a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
+</a>
+<a href="https://vitejs.dev" target="_blank">
+     <img src="public/vite.svg" class="logo" alt="Vite logo" />
+</a>
+<a href="https://vuejs.org/" target="_blank">
+     <img src="src/assets/vue.svg" class="logo vue" alt="Vue logo" />
+</a>
+</p>
 
 
 # Guideline
