@@ -1,39 +1,41 @@
 <template>
-	<h1>{{ msg }}</h1>
+	<div data-testid="delete">
+		<h1 class="msg">{{ msg }}</h1>
 
-	<div class="card">
-		<p>
-			Testing Localizations: {{ $t('works-fine') }}
-		</p>
-		<p>
-			Testing Store: {{ objectStore.object.message }}
-		</p>
-		<p>
-			Testing Mixins: {{ mixinsMessage }}
-		</p>
+		<div class="card">
+			<p>
+				Testing Localizations: {{ $t('works-fine') }}
+			</p>
+			<p>
+				Testing Store: {{ objectStore.object.message }}
+			</p>
+			<p>
+				Testing Mixins: {{ mixinsMessage }}
+			</p>
+		</div>
 	</div>
 </template>
 
 <script lang="ts">
 	// @ts-ignore
-	import { useObjectStore } from "~/stores/index.ts";
-	import { defineComponent } from "vue";
-	import { mapStores } from "pinia";
-	import { Logger } from "~/plugins/logger";
+	import { useObjectStore } from '~/stores/index.ts';
+	import { defineComponent } from 'vue';
+	import { mapStores } from 'pinia';
+	import { Logger } from '~/plugins/logger';
 	import mixins from '~/plugins/mixins';
-	import _ from 'lodash'
+	import _ from 'lodash';
 
 	export default defineComponent({
 		mixins: [mixins],
 		mounted() {
-			Logger.log( _.trim(' Lodash Works Fine! '))
-			Logger.log("Logger Works Fine!");
+			Logger.log(_.trim(' Lodash Works Fine! '));
+			Logger.log('Logger Works Fine!');
 		},
-		name: "DeleteThisLater",
+		name: 'DeleteThisLater',
 		props: {
 			msg: {
 				type: String,
-				default: 'Vite + Vue 3 Base'
+				default: 'Vite + Vue 3 Base',
 			},
 		},
 		computed: {
