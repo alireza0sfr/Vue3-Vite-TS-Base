@@ -1,14 +1,13 @@
 class Logger implements ILogger {
 
-  isDevBuild: boolean
-  base: ILoggerBase
-  level: LoggerLevelType
-  levels: LoggerLevels
-  logOnBuild: boolean
+  isDevBuild
+  base
+  level
+  levels
+  logOnBuild
 
-  constructor(level = 0, logOnBuild = false) {
+  constructor(level: LoggerLevelType = 'log', logOnBuild = false) {
     this.isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
-
     this.base = {
       debug: '[LOGGER DEBUG]',
       log: '[LOGGER LOG]',
@@ -18,10 +17,11 @@ class Logger implements ILogger {
       force: '[LOGGER FORCE]',
     }
 
-    this.level = level
-
+    
     this.levels = LoggerLevels
-
+    
+    this.level = this.levels[level]
+    
     this.logOnBuild = logOnBuild
   }
 
@@ -79,21 +79,20 @@ class Logger implements ILogger {
   }
 
   setLevel(level: LoggerLevelType) {
-    this.level = level
+    this.level = this.levels[level]
   }
 
   clear() {
     console.clear()
   }
 
-  customHandler(func: any, level: LoggerLevelType = 'Log') {
+  customHandler(func: any, level: LoggerLevelType = 'log') {
     if (this.validate(level))
       func()
   }
 }
 
-// @ts-ignore
-import { ILogger, LoggerLevels, ILoggerBase, LoggerLevelType } from '~/interfaces/general'
+import { ILogger, LoggerLevels, LoggerLevelType } from '../interfaces/general'
 
 const globalLogger = new Logger()
 

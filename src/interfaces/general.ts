@@ -2,21 +2,21 @@ interface ILogger {
   isDevBuild: boolean
   base: ILoggerBase
   level: LoggerLevelType
-  levels: LoggerLevels
+  levels: Record<LoggerLevels, string>
   logOnBuild: boolean
 
-  validate: (level: string, force: boolean) => boolean
+  validate: (level: LoggerLevelType, force?: boolean) => boolean
   time: (func: any) => void
-  debug: (messages: string[]) => void
-  log: (messages: string[]) => void
-  force: (messages: string[]) => void
-  warn: (messages: string[]) => void
-  error: (messages: string[]) => void
-  info: (messages: string[]) => void
-  getCurrentLevel: () => number
-  setLevel: (level: string) => void
+  debug: (...messages: string[]) => void
+  log: (...messages: string[]) => void
+  force: (...messages: string[]) => void
+  warn: (...messages: string[]) => void
+  error: (...messages: string[]) => void
+  info: (...messages: string[]) => void
+  getCurrentLevel: () => LoggerLevelType
+  setLevel: (level: LoggerLevelType) => void
   clear: () => void
-  customHandler: (func: any, level: string) => void
+  customHandler: (func: any, level: LoggerLevelType) => void
 }
 
 interface ILoggerBase {
@@ -29,14 +29,14 @@ interface ILoggerBase {
 }
 
 enum LoggerLevels {
-  Log = 0,
-  debug,
-  info,
-  warn,
-  error,
-  off = 99
+  off = 'off',
+  error = 'error',
+  warn = 'warn',
+  info = 'info',
+  debug = 'debug',
+  log = 'log'
 }
 
-type LoggerLevelType = 'Log' | 'Debug' | 'Info' | 'Warn' | 'Error' | 'Off'
+type LoggerLevelType = keyof typeof LoggerLevels;
 
 export { ILogger, ILoggerBase, LoggerLevels, LoggerLevelType }
