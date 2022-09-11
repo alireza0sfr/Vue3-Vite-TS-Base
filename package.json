@@ -1,23 +1,45 @@
 {
   "name": "vite-ts",
   "private": true,
+  "author": "Alireza Safari <alireza.safaree@gmail.com> (http://alireza-safari.ir)",
+  "license": "MIT",
+  "module": "./dist/vcp.es.js",
+  "description": "Ultimate Vue3 + Vite + TS base",
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/vcp.es.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "keywords": [
+    "vite base",
+    "vue3 base",
+    "vite + ts base",
+    "vue3 + ts base"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alireza0sfr/vite-ts-base"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "c8": "^7.12.0",
     "jquery": "^3.6.1",
     "lodash": "^4.17.21",

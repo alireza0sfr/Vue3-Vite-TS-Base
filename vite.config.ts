@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
@@ -8,7 +9,35 @@ export default defineConfig({
     setupFiles: ['./tests/config.ts'],
     environment: 'jsdom'
   },
-  plugins: [vue()],
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/install.ts'),
+      name: 'vite-ts',
+      formats: ['es'],
+      fileName: (format) => `vite-ts.${format}.js`
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        exports: 'named',
+        globals: {
+          'vue': 'Vue',
+        }
+      }
+    },
+  },
+  plugins: [
+    vue({
+      // @ts-ignore
+      style: true,
+      css: true
+    }),
+    vueI18n({
+      include: path.resolve(__dirname, './src/locales/**.json'),
+      globalSFCScope: true,
+      compositionOnly: false,
+    }),
+  ],
   server: {
     port: 8080
   },
