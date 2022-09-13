@@ -17,11 +17,11 @@ class Logger implements ILogger {
       force: '[LOGGER FORCE]',
     }
 
-    
+
     this.levels = LoggerLevels
-    
+
     this.level = this.levels[level]
-    
+
     this.logOnBuild = logOnBuild
   }
 
@@ -33,7 +33,7 @@ class Logger implements ILogger {
     if (!this.isDevBuild && !this.logOnBuild)
       return false
 
-    if (level < this.level)
+    if (level > this.level)
       return false
 
     return true
