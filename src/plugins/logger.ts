@@ -97,4 +97,3 @@ import { ILogger, LoggerLevels, LoggerLevelType } from '../interfaces/logger'
 const globalLogger = new Logger()
 
 export { globalLogger as Logger }
-export default Logger
