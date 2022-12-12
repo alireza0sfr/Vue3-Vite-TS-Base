@@ -66,6 +66,10 @@ npm run docs:build
   </li>
  <p>Vue router V4.</p>
     <li>
+       <strong>Mixins</strong>        
+  </li>
+   <p>Vue mixins are configured.</p>
+    <li>
        <strong>Enviroments</strong>        
   </li>
  <p>Development and production .env files.</p>
