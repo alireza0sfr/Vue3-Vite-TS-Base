@@ -11,8 +11,8 @@
 </a>
 </p>
 
-
 # Guideline
+
 - [Goal](#goal)
 - [How to setup](#how-to-setup)
 - [Repo Features](#repo-features)
@@ -21,10 +21,11 @@
 - [Bugs](#bugs)
 
 # Goal
+
 This project main goal is to provide a way to deploy vue applications by using vite along with ts, pinia and vue router4 and much more features a frontend developer needs.
 
-
 # How to Use
+
 ```
 git pull
 
@@ -49,13 +50,25 @@ npm run docs:dev
 npm run docs:build
 ```
 
-
 # Repo Features
+
 <ul>
   <li>
        <strong>Latest Vue3.2.37</strong>        
   </li>
  <p>Latest vue & requirements.</p>
+   <li>
+       <strong>Localizations</strong>        
+  </li>
+ <p>i18n Ready.</p>
+   <li>
+       <strong>Router System</strong>        
+  </li>
+ <p>Vue router V4.</p>
+    <li>
+       <strong>Enviroments</strong>        
+  </li>
+ <p>Development and production .env files.</p>
  <li>
        <strong>Git</strong>        
   </li>
@@ -72,9 +85,9 @@ npm run docs:build
   <p>Vitepress for documentations.</p>
 
  <li>
-       <strong>Lodash & Jquery</strong>        
+       <strong>Lodash & Jquery & Axios</strong>        
   </li>
-  <p>Lodash and jQuery are pre installed.</p>
+  <p>Lodash/jQuery/axios are pre installed.</p>
 
  <li>
        <strong>State Management</strong>        
@@ -114,11 +127,14 @@ npm run docs:build
 </ul>
 
 # License
+
 MIT.
 
 # Todo
+
 - [*] fix build configs.
 - [] add validator docs.
 
 # Bugs
+
 Feel free to let me know if something needs to be fixed. or even any features seems to be needed in this repo.
