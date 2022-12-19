@@ -89,9 +89,9 @@ npm run docs:build
   <p>Vitepress for documentations.</p>
 
  <li>
-       <strong>Lodash & Jquery & Axios</strong>        
+       <strong>Lodash & Axios</strong>        
   </li>
-  <p>Lodash/jQuery/axios are pre installed.</p>
+  <p>Lodash/axios are pre installed.</p>
 
  <li>
        <strong>State Management</strong>        
