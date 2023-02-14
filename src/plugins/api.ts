@@ -47,14 +47,14 @@ class Api implements IApi {
       // do anything before request
 
       this.axiosInstance.get(url)
-        .then(res => {
+        .then((res: any) => {
 
           if (typeof callback === 'function')
             return callback(res, url)
 
           resolve(res)
         })
-        .catch(err => {
+        .catch((err: any) => {
 
           if (typeof callback === 'function')
             return callback(err, url)
@@ -71,14 +71,14 @@ class Api implements IApi {
       // do anything before request
 
       this.axiosInstance.post(url, data)
-        .then(res => {
+        .then((res: any) => {
 
           if (typeof callback === 'function')
             return callback(res, url)
 
           resolve(res)
         })
-        .catch(err => {
+        .catch((err: any) => {
 
           if (typeof callback === 'function')
             return callback(err, url)
@@ -95,14 +95,14 @@ class Api implements IApi {
       // do anything before request
 
       this.axiosInstance.patch(url, data)
-        .then(res => {
+        .then((res: any) => {
 
           if (typeof callback === 'function')
             return callback(res, url)
 
           resolve(res)
         })
-        .catch(err => {
+        .catch((err: any) => {
 
           if (typeof callback === 'function')
             return callback(err, url)
@@ -119,14 +119,14 @@ class Api implements IApi {
       // do anything before request
 
       this.axiosInstance.put(url, data)
-        .then(res => {
+        .then((res: any) => {
 
           if (typeof callback === 'function')
             return callback(res, url)
 
           resolve(res)
         })
-        .catch(err => {
+        .catch((err: any) => {
 
           if (typeof callback === 'function')
             return callback(err, url)
