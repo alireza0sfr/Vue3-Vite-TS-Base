@@ -4,7 +4,7 @@ import axios, { AxiosRequestHeaders, AxiosInstance } from 'axios'
 class Api implements IApi {
 
   errorTextBase: string = '[API]'
-  axiosInstace: AxiosInstance
+  axiosInstance: AxiosInstance
 
   apiVersion: string
   apiPrefix: string
@@ -19,10 +19,10 @@ class Api implements IApi {
     this.timeout = timeout
     this.headers = headers
 
-    this.axiosInstace = this.axiosInstaceGenerator()
+    this.axiosInstance = this.axiosInstanceGenerator()
   }
 
-  axiosInstaceGenerator(): AxiosInstance {
+  axiosInstanceGenerator(): AxiosInstance {
     return axios.create({
       baseURL: this.baseURL,
       timeout: this.timeout,
@@ -46,7 +46,7 @@ class Api implements IApi {
     return new Promise((resolve, reject) => {
       // do anything before request
 
-      this.axiosInstace.get(url)
+      this.axiosInstance.get(url)
         .then(res => {
 
           if (typeof callback === 'function')
@@ -70,7 +70,7 @@ class Api implements IApi {
     return new Promise((resolve, reject) => {
       // do anything before request
 
-      this.axiosInstace.post(url, data)
+      this.axiosInstance.post(url, data)
         .then(res => {
 
           if (typeof callback === 'function')
@@ -94,7 +94,7 @@ class Api implements IApi {
     return new Promise((resolve, reject) => {
       // do anything before request
 
-      this.axiosInstace.patch(url, data)
+      this.axiosInstance.patch(url, data)
         .then(res => {
 
           if (typeof callback === 'function')
@@ -118,7 +118,7 @@ class Api implements IApi {
     return new Promise((resolve, reject) => {
       // do anything before request
 
-      this.axiosInstace.put(url, data)
+      this.axiosInstance.put(url, data)
         .then(res => {
 
           if (typeof callback === 'function')

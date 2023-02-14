@@ -3,7 +3,7 @@ import { AxiosRequestHeaders, AxiosResponse, AxiosInstance } from 'axios'
 interface IApi {
 
   errorTextBase: string
-  axiosInstace: AxiosInstance
+  axiosInstance: AxiosInstance
 
   apiVersion: string
   apiPrefix: string
@@ -11,7 +11,7 @@ interface IApi {
   timeout: number
   headers: AxiosRequestHeaders
 
-  axiosInstaceGenerator: () => AxiosInstance
+  axiosInstanceGenerator: () => AxiosInstance
   urlValidator: (url: string) => string
   get: (url: string, options?: IApiOptions, callback?: (res: any, url: string) => any) => AxiosResponse
   post: (url: string, data: dataType, options?: IApiOptions, callback?: (res: any, url: string) => any) => AxiosResponse
