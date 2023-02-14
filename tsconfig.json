@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
+    "allowJs": false,
     "baseUrl": "./",
     "paths": {
       "~/*": ["src/*"]
