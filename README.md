@@ -1,5 +1,5 @@
 <h1 align="center">Ultimate Vue3 + Vite + TS base</h1> 
-<h3 align="center">Just a big starting point for any frontend projects using vite</h3>
+<h3 align="center">Just a big starting point for frontend projects using Vite</h3>
 <p align="center">
 <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
 </a>
@@ -14,7 +14,7 @@
 # Guideline
 
 - [Goal](#goal)
-- [How to setup](#how-to-setup)
+- [How to use](#how-to-use)
 - [Repo Features](#repo-features)
 - [License](#license)
 - [Todo](#todo)
@@ -22,32 +22,44 @@
 
 # Goal
 
-This project main goal is to provide a way to deploy vue applications by using vite along with ts, pinia and vue router4 and much more features a frontend developer needs.
+This project's main goal is to provide a way to deploy Vue applications by using Vite, along with TS, Pinia, and Vue Router 4, as well as many other features that a frontend developer needs.
 
 # How to Use
 
-```
+## Setup
+
+```bash
 git pull
-
 npm install
+```
 
-// start the development server
+## Development
+
+To start the development server:
+
+```bash
 npm run dev
+```
 
-// build for deployment
+## Build & Deployment
+
+To build the project for deployment:
+
+```bash
 npm run build
+```
 
-// run test with exit code
-npm run test
+## Testing
 
-// test with uni
-npm run test:ui
+```bash
+npm test # run tests in the terminal
+npm run test:ui # run tests in the browser
+```
+## Documentation
 
-// start docs development server
-npm run docs:dev
-
-// build docs for deployment
-npm run docs:build
+```bash
+npm run docs:dev # start the docs development server
+npm run docs:build # build the docs for deployment
 ```
 
 # Repo Features
@@ -132,13 +144,13 @@ npm run docs:build
 
 # License
 
-MIT.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 # Todo
 
-- [*] fix build configs.
-- [] add validator docs.
+- [x] fix build configs
+- [ ] add validator docs
 
 # Bugs
 
-Feel free to let me know if something needs to be fixed. or even any features seems to be needed in this repo.
+Feel free to let me know if something needs to be fixed, or if any features seem to be needed in this repo.
